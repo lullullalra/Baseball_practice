@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./js/bs.js"></script>
+    <link rel="stylesheet" href="./css/bs.css" type="text/css" />
+    <title>Baseball</title>
+  </head>
+  <body>
+    <div id="stadium">
+      <div id="ready">
+        <table>
+          <tr>
+            <td rowspan="2" id="title">Number Baseball Game</td>
+            <td class="width-td">난이도</td>
+            <td>
+              상<input
+                type="radio"
+                name="level"
+                value="10"
+                onclick="setLevel(10)"
+              />
+              중<input
+                type="radio"
+                name="level"
+                value="15"
+                onclick="setLevel(15)"
+              />
+              하<input
+                type="radio"
+                name="level"
+                value="20"
+                onclick="setLevel(20)"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2">
+              <input
+                type="button"
+                value="시작"
+                class=""
+                id="start"
+                onclick="start(true)"
+                disabled
+              />
+              <input
+                type="button"
+                value="종료"
+                class=""
+                id="stop"
+                onclick="start(false)"
+                disabled
+              />
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="play">
+        <table>
+          <tr>
+            <td class="left-td">정답</td>
+            <td class="main-td">
+              <img src="../images/wait.png" alt="0" width="50" height="50" />
+              <img src="../images/wait.png" alt="0" width="50" height="50" />
+              <img src="../images/wait.png" alt="0" width="50" height="50" />
+              <img src="../images/wait.png" alt="0" width="50" height="50" />
+            </td>
+            <td rowspan="6"><div id="tried">시도</div></td>
+          </tr>
+          <tr>
+            <td>시도</td>
+            <td>
+              <img
+                src="../images/select.png"
+                alt="1"
+                width="50"
+                height="50"
+                id="tryNum01"
+                name="try"
+              />
+              <img
+                src="../images/select.png"
+                alt="2"
+                width="50"
+                height="50"
+                id="tryNum02"
+                name="try"
+              />
+              <img
+                src="../images/select.png"
+                alt="3"
+                width="50"
+                height="50"
+                id="tryNum03"
+                name="try"
+              />
+              <img
+                src="../images/select.png"
+                alt="4"
+                width="50"
+                height="50"
+                id="tryNum04"
+                name="try"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>action</td>
+            <td>
+              <input type="button" value="중도포기" onclick="" />
+              <input
+                type="button"
+                value="제출"
+                onclick="handOut(false)"
+                id="btn_handout"
+              />
+              <input type="button" value="정답보기" onclick="" />
+            </td>
+          </tr>
+          <tr>
+            <td>결과</td>
+            <td>
+              <span class="number" id="strike">2</span>
+              <img src="../images/strike.png" alt="0" width="30" height="30" />
+              <span class="number" id="ball">2</span>
+              <img src="../images/ball.png" alt="0" width="30" height="30" />
+            </td>
+          </tr>
+          <tr>
+            <td>선택</td>
+            <td>
+              <img
+                src="../images/0.png"
+                alt="0"
+                width="25"
+                height="25"
+                class="selectNum"
+              />
+              <img
+                src="../images/1.png"
+                alt="1"
+                width="25"
+                height="25"
+                class="selectNum"
+              />
+              <img
+                src="../images/2.png"
+                alt="2"
+                width="25"
+                height="25"
+                class="selectNum"
+              />
+              <img
+                src="../images/3.png"
+                alt="3"
+                width="25"
+                height="25"
+                class="selectNum"
+              />
+              <img
+                src="../images/4.png"
+                alt="4"
+                width="25"
+                height="25"
+                class="selectNum"
+              />
+              <img
+                src="../images/5.png"
+                alt="5"
+                width="25"
+                height="25"
+                class="selectNum"
+              />
+              <img
+                src="../images/6.png"
+                alt="6"
+                width="25"
+                height="25"
+                class="selectNum"
+              />
+              <img
+                src="../images/7.png"
+                alt="7"
+                width="25"
+                height="25"
+                class="selectNum"
+              />
+              <img
+                src="../images/8.png"
+                alt="8"
+                width="25"
+                height="25"
+                class="selectNum"
+              />
+              <img
+                src="../images/9.png"
+                alt="9"
+                width="25"
+                height="25"
+                class="selectNum"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>사용유무</td>
+            <td>
+              <input type="checkbox" value="0" style="margin-right: 10px" />
+              <input type="checkbox" value="1" style="margin-right: 10px" />
+              <input type="checkbox" value="2" style="margin-right: 8px" />
+              <input type="checkbox" value="3" style="margin-right: 8px" />
+              <input type="checkbox" value="4" style="margin-right: 7px" />
+              <input type="checkbox" value="5" style="margin-right: 7px" />
+              <input type="checkbox" value="6" style="margin-right: 7px" />
+              <input type="checkbox" value="7" style="margin-right: 10px" />
+              <input type="checkbox" value="8" style="margin-right: 10px" />
+              <input type="checkbox" value="9" style="margin-right: 10px" />
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <button onclick="registImg()">test</button>
+  </body>
+</html>

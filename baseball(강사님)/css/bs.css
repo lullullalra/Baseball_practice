@@ -1,0 +1,52 @@
+table,
+tr,
+td {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 0px auto;
+  width: 600px;
+}
+
+#ready {
+  display: flex;
+  place-items: center;
+}
+
+#title {
+  padding: 10px 30px;
+}
+
+.width-td {
+  padding: 3px 5px;
+}
+
+#number {
+  width: 30px;
+  height: 30px;
+  background-color: lightgray;
+  color: red;
+  float: left;
+  text-align: right;
+  font-size: 25px;
+  padding-top: 0px;
+}
+
+#play {
+  display: none; /*none 이 기본값*/
+  margin-top: 5px;
+}
+
+#stadium {
+  background-color: bisque;
+}
+
+.main-td {
+  width: 55%;
+}
+
+.left-td {
+  width: 20%;
+}
